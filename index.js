@@ -13,9 +13,6 @@ import { Vector } from "./Vector.js";
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
-let balls = [];
-let n, id;
-
 function animation() {
   requestAnimationFrame(animation);
 
@@ -198,19 +195,17 @@ let ball_2 = new Ball(500, 100, 0, 0, 10);
 ball_1.draw();
 ball_2.draw();*/
 
-document.getElementById("db").addEventListener("change", () => {
-  balls = [];
-  n = Math.floor(Math.random() * 20) + 2;
+let balls = [];
+let n = Math.floor(Math.random() * 20) + 2;
 
-  for (let i = 0; i < n; i++) {
-    let random_x = Math.floor(Math.random() * (canvas.width - 100)) + 50;
-    let random_y = Math.floor(Math.random() * (canvas.height - 100)) + 50;
-    let random_m = Math.floor(Math.random() * 25) + 1;
-    let random_v_x = Math.floor(Math.random() * 7) + 1;
-    let random_v_y = Math.floor(Math.random() * 7) + 1;
+for (let i = 0; i < n; i++) {
+  let random_x = Math.floor(Math.random() * (canvas.width - 100)) + 50;
+  let random_y = Math.floor(Math.random() * (canvas.height - 100)) + 50;
+  let random_m = Math.floor(Math.random() * 25) + 1;
+  let random_v_x = Math.floor(Math.random() * 7) + 1;
+  let random_v_y = Math.floor(Math.random() * 7) + 1;
 
-    balls.push(new Ball(random_x, random_y, random_v_x, random_v_y, random_m));
+  balls.push(new Ball(random_x, random_y, random_v_x, random_v_y, random_m));
 
-    requestAnimationFrame(animation);
-  }
-});
+  requestAnimationFrame(animation);
+}
