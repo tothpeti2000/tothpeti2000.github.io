@@ -14,6 +14,7 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 let balls = [];
+let n;
 
 function animation() {
   requestAnimationFrame(animation);
@@ -199,7 +200,7 @@ ball_2.draw();*/
 
 document.getElementById("db").addEventListener("change", () => {
   balls = [];
-  let n = Number(document.getElementById("db").value);
+  n = Number(document.getElementById("db").value);
 
   for (let i = 0; i < n; i++) {
     let random_x = Math.floor(Math.random() * (canvas.width - 100)) + 50;
@@ -211,9 +212,7 @@ document.getElementById("db").addEventListener("change", () => {
     balls.push(new Ball(random_x, random_y, random_v_x, random_v_y, random_m));
   }
 
-  for (let i = 0; i < n; i++) {
-    balls[i].draw();
-  }
+  clear_canvas();
 
   requestAnimationFrame(animation);
 });
