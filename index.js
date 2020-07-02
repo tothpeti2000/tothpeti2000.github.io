@@ -201,7 +201,7 @@ let n = Math.floor(Math.random() * 10) + 2;
 for (let i = 0; i < n; i++) {
   let random_x = Math.floor(Math.random() * (canvas.width - 100)) + 50;
   let random_y = Math.floor(Math.random() * (canvas.height - 100)) + 50;
-  let random_m = Math.floor(Math.random() * 25) + 1;
+  let random_m = Math.floor(Math.random() * 10) + 5;
   let random_v_x = Math.floor(Math.random() * 5) + 1;
   let random_v_y = Math.floor(Math.random() * 5) + 1;
 
