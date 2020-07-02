@@ -196,7 +196,7 @@ ball_1.draw();
 ball_2.draw();*/
 
 let balls = [];
-let n = Math.floor(Math.random() * 30) + 2;
+let n = Math.floor(Math.random() * 10) + 2;
 
 for (let i = 0; i < n; i++) {
   let random_x = Math.floor(Math.random() * (canvas.width - 100)) + 50;
